@@ -6,7 +6,7 @@
 			</h2>
 			<div class="flex flex-col gap-5">
 				<ul class="list-disc marker:text-biruza pl-5">
-					<li><a class="text-biruza underline" href="/pages/alergologist">Алерголог</a></li>
+					<li><a class="text-biruza underline" href="/pages-doctors/alergologist">Алерголог</a></li>
 					<li><a class="text-biruza underline" href="/pages-doctors/anestesiologist">Анестезіолог</a></li>
 					<li><a class="text-biruza underline" href="/">Вірусолог</a></li>
 					<li><a class="text-biruza underline" href="/">Гастроентеролог</a></li>
