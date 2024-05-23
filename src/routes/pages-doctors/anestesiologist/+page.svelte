@@ -5,13 +5,13 @@
 	import SectionWork from '$lib/components/components-pages-doctors/SectionWork.svelte';
 	import SectionDuties from '$lib/components/components-pages-doctors/SectionDuties.svelte';
 	import SectionPrimary from '$lib/components/components-pages-doctors/SectionPrimary.svelte';
-	import type { ListItemData } from '$lib/types.js';
+	import SectionImage from '$lib/components/components-pages-doctors/SectionImage.svelte';
 
 	export let data;
 </script>
 
 <Breadcrumb data={data.BreadcrumbData} />
 <SectionWork data={data.SectionWorkData} />
-<SectionDuties data={data.SectionDutiesData} />
-
-<SectionPrimary data={data.ListData} />
+<SectionDuties {data} />
+<SectionImage />
+<SectionPrimary {data} />

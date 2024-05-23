@@ -17,24 +17,7 @@
 	</Section>
 	<main class="flex-auto">
 		<slot />
-		<Section classes="mb-5">
-			<Container>
-				<picture class=" w-full">
-					<source
-						srcset="/img/all-article-web-page-content-img/article-anestesiologist.avif"
-						type="image/avif"
-					/>
-					<source
-						srcset="/img/all-article-web-page-content-img/article-anestesiologist.webp"
-						type="image/webp"
-					/>
-					<img
-						src="/img/all-article-web-page-content-img/article-anestesiologist.jpg"
-						alt="article-anestesiologist"
-					/>
-				</picture>
-			</Container>
-		</Section>
+		
 	</main>
 	<Footer />
 </div>

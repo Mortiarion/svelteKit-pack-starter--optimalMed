@@ -1,52 +1,27 @@
 <script lang="ts">
-	import type { SectionDutiesData } from '$lib/types';
+	import type { SectionDutiesData, ListItemData } from '$lib/types';
 	import Section from '$lib/base-components/Section.svelte';
 	import Container from '$lib/base-components/Container.svelte';
 	import List from '$lib/base-components/List.svelte';
+	import Heading from '$lib/base-components/Heading.svelte';
 
-	export let data: SectionDutiesData;
+	export let data: {
+		SectionDutiesData: SectionDutiesData;
+		SectionDutiesListData: ListItemData[];
+	};
 </script>
 
 <Section>
 	<Container classes="2xl:max-w-3xl">
 		<div class="flex flex-col gap-5">
-			<h6 class="text-3xl font-bold">
-				{data.heading}
-				<span class="text-biruza">{data.subtitle}</span>
-			</h6>
+			<Heading level="h2" classes="text-3xl font-bold">
+				{data.SectionDutiesData.heading}
+				<span class="text-biruza">{data.SectionDutiesData.subtitle}</span>
+			</Heading>
 			<p>
-				{data.paragraph}
+				{data.SectionDutiesData.paragraph}
 			</p>
-
-			<ul class=" mb-5 list-disc pl-5">
-				<li>
-					{data.list1}
-				</li>
-				<li>
-					{data.list2}
-				</li>
-				<li>
-					{data.list3}
-				</li>
-				<li>
-					{data.list4}
-				</li>
-				<li>
-					{data.list5}
-				</li>
-				<li>
-					{data.list6}
-				</li>
-				<li>
-					{data.list7}
-				</li>
-				<li>
-					{data.list8}
-				</li>
-				<li>
-					{data.list9}
-				</li>
-			</ul>
+			<List items={data.SectionDutiesListData} />
 		</div>
 	</Container>
 </Section>
