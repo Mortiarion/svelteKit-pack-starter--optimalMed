@@ -1,20 +1,24 @@
 <script lang="ts">
 	import type { SectionDutiesData } from '$lib/types';
+	import Section from '$lib/base-components/Section.svelte';
+	import Container from '$lib/base-components/Container.svelte';
+	import List from '$lib/base-components/List.svelte';
 
 	export let data: SectionDutiesData;
 </script>
 
-<section>
-	<div class="container max-w-3xl m-auto">
+<Section>
+	<Container classes="2xl:max-w-3xl">
 		<div class="flex flex-col gap-5">
-			<h6 class="font-bold text-3xl">
+			<h6 class="text-3xl font-bold">
 				{data.heading}
 				<span class="text-biruza">{data.subtitle}</span>
 			</h6>
 			<p>
 				{data.paragraph}
 			</p>
-			<ul class=" list-disc pl-5 mb-5">
+
+			<ul class=" mb-5 list-disc pl-5">
 				<li>
 					{data.list1}
 				</li>
@@ -44,5 +48,5 @@
 				</li>
 			</ul>
 		</div>
-	</div>
-</section>
+	</Container>
+</Section>
