@@ -1,12 +1,18 @@
 import type { PageServerLoad } from './$types';
+import type {
+	BreadcrumbData,
+	SectionWorkData,
+	SectionDutiesData,
+	SectionPrimaryType
+} from '$lib/types';
 
 export const load: PageServerLoad = async () => {
-	const BreadcrumbData = {
+	const BreadcrumbData: BreadcrumbData = {
 		bredCrumbsHead: 'Головна',
 		bredCrumbsCategories: 'Робота анестезіологом у Польщі'
 	};
 
-	const SectionWorkData = {
+	const SectionWorkData: SectionWorkData = {
 		heading: 'Робота',
 		subtitle: 'анестезіологом у Польщі',
 		paragraph1:
@@ -15,7 +21,7 @@ export const load: PageServerLoad = async () => {
 			'Наша компанія пропонує працевлаштування та подальшу підтримку лікарям-вихідцям з України та Білорусі. З нашою допомогою ви отримаєте можливість обирати з великої кількості вакансій з різними умовами в різних регіонах країни.'
 	};
 
-	const SectionDutiesData = {
+	const SectionDutiesData: SectionDutiesData = {
 		heading: 'Посадові',
 		subtitle: 'обов`язки анестезіолога',
 		paragraph:
@@ -82,12 +88,32 @@ export const load: PageServerLoad = async () => {
 		}
 	];
 
+	const SectionPrimaryData: SectionPrimaryType = {
+		paragraph:
+			'Кваліфікований анестезіолог має вміти працювати з усіма видами анестезії - загальною (так званим наркозом), регіонарною та місцевою.',
+		title: 'Кого візьмуть',
+		subtitle: 'на роботу анестезіологом у польську клініку?',
+		paragraph2:
+			'Вільні вакансії лікаря-анестезіолога в Польщі є у відділеннях інтенсивної терапії в державних і приватних закладах стаціонарного типу, а також в амбулаторіях, обладнаних власними малими операційними.',
+		paragraph3:
+			'На співбесіді з претендентом на посаду анестезіолога-реаніматолога роботодавець звертає увагу на наявність:',
+		paragraph4:
+			'За інших рівних умов перевагу віддають претендентам, у резюме яких зазначено наявність важливих професійних та особистих якостей - стресостійкості, самовладання, зібраності, холоднокровності, хорошої пам`яті, а також неконфліктності, сумлінності та здатності ефективно працювати в команді.',
+		paragraph5:
+			'Влаштовуючись на роботу анестезіологом до Польщі, іноземний фахівець може гарантовано розраховувати на:',
+		paragraph6:
+			'Додайте до цього оптимальні умови для здобуття нових знань, професійного та кар`єрного зростання, а також можливість працювати, орієнтуючись на високі стандарти європейської медицини. А потім, оцінивши всі вигоди та переваги, звертайтеся - підберемо для вас найкращу вакансію.',
+		title1: 'Умови, що',
+		subtitle1: 'надаються'
+	};
+
 	return {
 		BreadcrumbData,
 		SectionWorkData,
 		SectionDutiesData,
 		ListData,
 		ListData2,
-		SectionDutiesListData
+		SectionDutiesListData,
+		SectionPrimaryData
 	};
 };

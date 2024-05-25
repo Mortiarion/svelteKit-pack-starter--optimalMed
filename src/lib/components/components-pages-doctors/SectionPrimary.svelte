@@ -1,13 +1,14 @@
 <script lang="ts">
-	import type { ListItemData } from '$lib/types';
+	import type { ListItemData, SectionPrimaryType } from '$lib/types';
 	import Section from '$lib/base-components/Section.svelte';
 	import Container from '$lib/base-components/Container.svelte';
 	import List from '$lib/base-components/List.svelte';
-    import Heading from '$lib/base-components/Heading.svelte';
+	import Heading from '$lib/base-components/Heading.svelte';
 
 	export let data: {
 		ListData: ListItemData[];
 		ListData2: ListItemData[];
+		SectionPrimaryData: SectionPrimaryType;
 	};
 </script>
 
@@ -15,47 +16,32 @@
 	<Container classes="2xl:max-w-3xl">
 		<div class="primary-requirements">
 			<p class="mb-5">
-				Кваліфікований анестезіолог має вміти працювати з усіма видами анестезії - загальною (так
-				званим наркозом), регіонарною та місцевою.
+				{data.SectionPrimaryData.paragraph}
 			</p>
 			<p class="mb-5">
-				Вільні вакансії лікаря-анестезіолога в Польщі є у відділеннях інтенсивної терапії в
-				державних і приватних закладах стаціонарного типу, а також в амбулаторіях, обладнаних
-				власними малими операційними.
+				{data.SectionPrimaryData.paragraph2}
 			</p>
-            
-			<h6 class="mb-5 text-3xl font-bold">
-				Кого візьмуть
-				<span class=" text-biruza"> на роботу анестезіологом у польську клініку? </span>
-			</h6>
+			<Heading level="h2" classes="mb-5 text-3xl font-bold">
+				{data.SectionPrimaryData.title}
+				<span class=" text-biruza">{data.SectionPrimaryData.subtitle}</span>
+			</Heading>
 			<p class="mb-5">
-				На співбесіді з претендентом на посаду анестезіолога-реаніматолога роботодавець звертає
-				увагу на наявність:
+				{data.SectionPrimaryData.paragraph3}
 			</p>
-
 			<List items={data.ListData} />
-
 			<p class="mb-5">
-				За інших рівних умов перевагу віддають претендентам, у резюме яких зазначено наявність
-				важливих професійних та особистих якостей - стресостійкості, самовладання, зібраності,
-				холоднокровності, хорошої пам'яті, а також неконфліктності, сумлінності та здатності
-				ефективно працювати в команді.
+				{data.SectionPrimaryData.paragraph4}
 			</p>
-			<h6 class="mb-5 text-3xl font-bold">
-				Умови, що
-				<span class="text-biruza"> надаються </span>
-			</h6>
+			<Heading level="h2" classes="mb-5 text-3xl font-bold">
+				{data.SectionPrimaryData.title1}
+				<span class="text-biruza">{data.SectionPrimaryData.subtitle1}</span>
+			</Heading>
 			<p class="mb-5">
-				Влаштовуючись на роботу анестезіологом до Польщі, іноземний фахівець може гарантовано
-				розраховувати на:
+				{data.SectionPrimaryData.paragraph5}
 			</p>
 			<List items={data.ListData2} />
-
 			<p class="mb-5">
-				Додайте до цього оптимальні умови для здобуття нових знань, професійного та кар'єрного
-				зростання, а також можливість працювати, орієнтуючись на високі стандарти європейської
-				медицини. А потім, оцінивши всі вигоди та переваги, звертайтеся - підберемо для вас найкращу
-				вакансію.
+				{data.SectionPrimaryData.paragraph6}
 			</p>
 		</div>
 	</Container>

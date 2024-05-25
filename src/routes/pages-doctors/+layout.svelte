@@ -17,7 +17,6 @@
 	</Section>
 	<main class="flex-auto">
 		<slot />
-		
 	</main>
 	<Footer />
 </div>
