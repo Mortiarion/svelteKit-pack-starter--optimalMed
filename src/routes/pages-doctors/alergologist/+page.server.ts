@@ -11,16 +11,16 @@ import type {
 export const load: PageServerLoad = async () => {
 	const BreadcrumbData: BreadcrumbType = {
 		bredCrumbsHead: 'Головна',
-		bredCrumbsCategories: 'Робота анестезіологом у Польщі'
+		bredCrumbsCategories: 'Робота алергологом у Польщі'
 	};
 
 	const SectionTitleTwoParagraphData: SectionTitleTwoParagraphType = {
 		title: 'Робота',
-		subtitle: 'анестезіологом у Польщі',
+		subtitle: 'алергологом у Польщі',
 		paragraph__one:
-			'У зв`язку зі складною ситуацією з медичними кадрами польські роботодавці готові приймати на роботу анестезіологом у Польщі іноземних спеціалістів, зокрема з колишніх союзних республік, гарантуючи адекватну заробітну плату та інші преференції.',
+			'Як відомо, алергічні реакції безпосередньо пов`язані з роботою імунної системи. І чим нижчий імунітет популяції, тим частіше у дітей і дорослих проявляються різного роду алергічні реакції. У зв`язку з цим, а також з урахуванням масової робочої міграції фахівців до країн Західної Європи, робота алергологом у Польщі для іноземців сьогодні більш доступна, ніж будь-коли.',
 		paragraph__two:
-			'Наша компанія пропонує працевлаштування та подальшу підтримку лікарям-вихідцям з України та Білорусі. З нашою допомогою ви отримаєте можливість обирати з великої кількості вакансій з різними умовами в різних регіонах країни.'
+			'Ми займаємося працевлаштуванням іноземних лікарів, переважно, українців і білорусів, у польські медичні заклади впродовж кількох років. У нашому багажі - великий пул успішних кейсів і постійно оновлювана база актуальних вакансій. Знайдемо для вас роботу алергологом у Польщі з хорошою заробітною платою і комфортними умовами. А крім цього - надамо комплексну підтримку у вивченні мови, релокації, пошуку житла, оформленні документів.'
 	};
 
 	const SectionTitleParListTwoParData: SectionTitleParListTwoParType = {
@@ -91,15 +91,15 @@ export const load: PageServerLoad = async () => {
 
 	const SectionImageData: SectionImageType = {
 		image: {
-			src: '/img/all-article-web-page-content-img/article-anestesiologist.jpg',
+			src: '/img/all-article-web-page-content-img/article-alergologist.jpg',
 			alt: 'article-anestesiologist'
 		},
 		source: {
-			srcset: '/img/all-article-web-page-content-img/article-anestesiologist.webp',
+			srcset: '/img/all-article-web-page-content-img/article-alergologist.webp',
 			type: 'image/webp'
 		},
 		source1: {
-			srcset: '/img/all-article-web-page-content-img/article-anestesiologist.avif',
+			srcset: '/img/all-article-web-page-content-img/article-alergologist.avif',
 			type: 'image/avif'
 		}
 	};

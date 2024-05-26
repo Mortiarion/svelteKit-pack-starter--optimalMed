@@ -2,32 +2,33 @@
 
 <script lang="ts">
 	import type {
-		ListItemData,
-		SectionPrimaryType,
-		BreadcrumbData,
-		SectionWorkData,
-		SectionDutiesData
+		BreadcrumbType,
+		SectionTitleTwoParagraphType,
+		SectionTitleParListTwoParType,
+		SectionTitleParListParType,
+		SectionTitleParListParTypeTwo,
+		SectionImageType
 	} from '$lib/types';
 
 	import Breadcrumb from '$lib/components/components-pages-doctors/Bredcrumbs.svelte';
-	import SectionWork from '$lib/components/components-pages-doctors/SectionWork.svelte';
-	import SectionDuties from '$lib/components/components-pages-doctors/SectionDuties.svelte';
-	import SectionPrimary from '$lib/components/components-pages-doctors/SectionPrimary.svelte';
+	import SectionTitleTwoParagraph from '$lib/components/components-pages-doctors/SectionTitleTwoParagraph.svelte';
+	import SectionTitleParListTwoPar from '$lib/components/components-pages-doctors/SectionTitleParListTwoPar.svelte';
+	import SectionTitleParListPar from '$lib/components/components-pages-doctors/SectionTitleParListPar.svelte';
 	import SectionImage from '$lib/components/components-pages-doctors/SectionImage.svelte';
 
 	export let data: {
-		BreadcrumbData: BreadcrumbData;
-		SectionWorkData: SectionWorkData;
-		SectionPrimaryData: SectionPrimaryType;
-		SectionDutiesData: SectionDutiesData;
-		SectionDutiesListData: ListItemData[];
-		ListData: ListItemData[];
-		ListData2: ListItemData[];
+		BreadcrumbData: BreadcrumbType;
+		SectionTitleTwoParagraphData: SectionTitleTwoParagraphType;
+		SectionTitleParListTwoParData: SectionTitleParListTwoParType;
+		SectionTitleParListParData: SectionTitleParListParType;
+		SectionTitleParListParTypeTwoData: SectionTitleParListParTypeTwo;
+		SectionImageData: SectionImageType;
 	};
 </script>
 
 <Breadcrumb data={data.BreadcrumbData} />
-<SectionWork data={data.SectionWorkData} />
-<SectionDuties data={{ SectionDutiesData: data.SectionDutiesData, SectionDutiesListData: data.SectionDutiesListData }} />
-<SectionImage />
-<SectionPrimary data={{ SectionPrimaryData: data.SectionPrimaryData, ListData: data.ListData, ListData2: data.ListData2 }} />
+<SectionTitleTwoParagraph data={data.SectionTitleTwoParagraphData} />
+<SectionTitleParListTwoPar data={data.SectionTitleParListTwoParData} />
+<SectionImage data={data.SectionImageData} />
+<SectionTitleParListPar data={data.SectionTitleParListParData} />
+<SectionTitleParListPar data={data.SectionTitleParListParTypeTwoData} />

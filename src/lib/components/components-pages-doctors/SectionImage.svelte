@@ -1,22 +1,25 @@
 <script lang="ts">
+	import type { SectionImageType } from '$lib/types'
 	import Section from '$lib/base-components/Section.svelte';
 	import Container from '$lib/base-components/Container.svelte';
+
+	export let data: SectionImageType;
 </script>
 
 <Section classes="mb-5">
 	<Container>
 		<picture >
 			<source
-				srcset="/img/all-article-web-page-content-img/article-anestesiologist.avif"
-				type="image/avif"
+				srcset={data.source1.srcset}
+				type={data.source1.type}
 			/>
 			<source
-				srcset="/img/all-article-web-page-content-img/article-anestesiologist.webp"
-				type="image/webp"
+				srcset={data.source.srcset}
+				type={data.source.type}
 			/>
 			<img class=" w-full"
-				src="/img/all-article-web-page-content-img/article-anestesiologist.jpg"
-				alt="article-anestesiologist"
+				src={data.image.src}
+				alt={data.image.alt}
 			/>
 		</picture>
 	</Container>

@@ -1,32 +1,75 @@
-export type BreadcrumbData = {
+export type BreadcrumbType = {
 	bredCrumbsHead: string;
 	bredCrumbsCategories: string;
 };
 
-export type SectionWorkData = {
-	heading: string;
-	subtitle: string;
-	paragraph1: string;
-	paragraph2: string;
-};
-
-export type SectionDutiesData = {
-	heading: string;
-	subtitle: string;
-	paragraph: string;
-};
-
-export type SectionPrimaryType = {
-	paragraph: string;
+export type SectionTitleTwoParagraphType = {
 	title: string;
 	subtitle: string;
-	paragraph2: string;
-	paragraph3: string;
-	paragraph4: string;
-	paragraph5: string;
-	paragraph6: string;
-	title1: string;
-	subtitle1: string;
+	paragraph__one: string;
+	paragraph__two: string;
 };
 
-export type ListItemData = [{ text: string }];
+export type SectionTitleParListTwoParType = {
+	title: string;
+	subtitle: string;
+	paragraph__one: string;
+	list: [
+		{ text: string },
+		{ text: string },
+		{ text: string },
+		{ text: string },
+		{ text: string },
+		{ text: string },
+		{ text: string },
+		{ text: string },
+		{ text: string }
+	];
+	paragraph__two: string;
+	paragraph__three: string;
+};
+
+export type SectionTitleParListParType = {
+	title: string;
+	subtitle: string;
+	paragraph__one: string;
+	list: [
+		{ text: string },
+		{ text: string },
+		{ text: string },
+		{ text: string },
+		{ text: string },
+		{ text: string }
+	];
+	paragraph__two: string;
+};
+
+export type SectionTitleParListParTypeTwo = {
+	title: string;
+	subtitle: string;
+	paragraph__one: string;
+	list: [
+		{ text: string },
+		{ text: string },
+		{ text: string },
+		{ text: string },
+		{ text: string },
+		{ text: string }
+	];
+	paragraph__two: string;
+};
+
+export type SectionImageType = {
+	image: {
+		src: string;
+		alt: string;
+	};
+	source: {
+		srcset: string;
+		type: string;
+	};
+	source1: {
+		srcset: string;
+		type: string;
+	};
+};
